@@ -279,4 +279,36 @@ export default function TodoList() {
   );
 }
 
+
+one mor case for uppercaseall
+const upperCaseAll = () => {
+    console.log("Converting all tasks to uppercase");
+  
+    // Using setTasks to update the tasks state
+    setTasks(prevTasks => {
+      debugger;
+      // Step 1: Iterate through each task in the previous state (prevTasks)
+      const updatedTasks = prevTasks.map(todo => {
+        debugger;
+        // Step 2: For each task (todo), convert the task text to uppercase
+        const updatedTodo = { 
+          ...todo, // Keep other properties unchanged
+          task: todo.task.toUpperCase() // Convert the task text to uppercase
+        };
+  
+        // Step 3: Log the individual task before it is updated (optional)
+        console.log("Before Uppercasing:", todo);
+        console.log("After Uppercasing:", updatedTodo);
+  
+        // Return the updated task
+        return updatedTodo;
+      });
+  
+      // Step 4: Log all updated tasks after converting them to uppercase
+      console.log("All tasks after uppercasing:", updatedTasks);
+  
+      // Return the updated tasks array to update the state
+      return updatedTasks;
+    });
+  };
 */
